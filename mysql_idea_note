@@ -1,0 +1,24 @@
+1、忘记mysql密码
+（1）修改mysql的配置文件my.ini，在里面[mysqld]一段下面加上一句skip-grant-tables，重启mysql服务，然后用你用客户端登陆就不需要密码了。
+（2）修改完密码，把mysql的配置文件改回来就ok。
+show databases;
+use msyql;
+update user set password=password("root") where user="root";
+flush privileges;
+前提是mysql得启动
+2、搜索计算机管理
+服务
+找到MYSQL,如果找不到就
+（3、以管理员身份运行cmd
+方法是搜索cmd,右键以管理员身份运行
+cd 到 mysql安装的bin目录）
+安装
+mysqld --install
+安装成功后再次运行，执行mysql -hlocalhost -uroot命令,不需要输密码
+修改密码成功后，关闭mysql,找到配置文件改回来。
+
+alt+insert 新建文件文件夹快捷键
+run:shift+f10
+debug:shift+f9
+ctrl+n查找java文件
+ctrl+shift+n根据文件名查找文件
